@@ -1,6 +1,6 @@
 {
   "name": "components-library-tutorial",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,7 @@
   "dependencies": {
     "styled-components": "^5.3.3"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "@babel/core": "^7.16.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
