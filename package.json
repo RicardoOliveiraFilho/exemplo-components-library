@@ -4,6 +4,9 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 6006",
