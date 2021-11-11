@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
+import { terser } from 'rollup-plugin-terser';
 
 const packageJson = require("./package.json");
 
@@ -18,6 +19,15 @@ export default {
       file: packageJson.module,
       format: "esm",
       sourcemap: true
+    },
+    {
+      file: 'dist/components.min.js',
+      format: 'iife',
+      name: 'version',
+      globals: {
+        'react': 'React',
+      },
+      plugins: [terser()]
     }
   ],
   plugins: [
